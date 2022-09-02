@@ -1,0 +1,217 @@
+.herobanner {
+	position: relative;
+	z-index: 1;
+
+	@include bp(tabletsm) {
+		background: $grey1;
+	}
+
+	.herobnr_bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		@include bp(tabletsm) {
+			display: none;
+		}
+	}
+
+	.container {
+		@include bp(tabletmd) {
+			padding: 0;
+		}
+	}
+}
+
+.introallert_box {
+	background: $grey1;
+	position: relative;
+	font-size: 1.4rem;
+	padding: 1.1rem 5.4rem 0.7rem 2.2rem;
+	box-shadow: 0.1rem -0.1rem 1.2rem 0 rgba(0, 0, 0, 0.22);
+
+	@include bp(tabletmd) {
+		padding: 4.4rem 2.2rem 1.5rem 2.2rem;
+	}
+
+	> div {
+		display: inline-flex;
+		align-items: flex-start;
+	}
+
+	.introslide_item {
+		@include bp(tabletmd) {
+			text-align: center;
+		}
+		p,
+		.btn {
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 0;
+		}
+
+		.tag {
+			background: $white;
+			padding: 0.6rem 1.5rem;
+			color: $green;
+			display: inline-block;
+			margin-right: 1.7rem;
+			box-shadow: inset 0.2rem 0rem 0rem 0 #ebebeb;
+			@include bp(lg) {
+				display: block;
+				max-width: 19.5rem;
+			}
+			@include bp(tabletmd) {
+				display: inline-block;
+				margin-right: 0;
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		> p {
+			margin: 0.3rem 1.8rem 0 0;
+			color: $grey5;
+
+			@include bp(tabletmd) {
+				margin: 0.3rem 0 0.5rem 0;
+				width: 100%;
+			}
+		}
+
+		.btn {
+			border: 0.1rem solid $green;
+			background: $white;
+			color: $grey5;
+			border-radius: 0;
+			min-width: auto;
+			padding: 0.5rem 1.8rem;
+			font-size: 1.1rem;
+			box-shadow: inset 0 0 0.3rem 0 #7c7c7c;
+		}
+	}
+
+	.introallert_slider {
+		max-width: calc(100% - 17rem);
+		top: 0;
+		@include bp(tabletmd) {
+			max-width: 100%;
+		}
+	}
+
+	.slick-track:before,
+	.slick-track:after {
+		display: none;
+	}
+}
+
+.introallert_counter {
+	float: right;
+	margin: 0.5rem 0 0 0;
+
+	@include bp(tabletmd) {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 1.5rem;
+		justify-content: center;
+	}
+}
+
+.introallert_boxclose {
+	position: absolute;
+	right: 0;
+	top: 1.5rem;
+	background: $white;
+	color: $green;
+	width: 2.8rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	@include bp(tabletmd) {
+		right: auto;
+		left: 0;
+	}
+}
+
+.hero_slideitem {
+	z-index: 1;
+
+	@include bp(tabletsm) {
+		margin-bottom: 18rem;
+	}
+
+	.hero_slidebg {
+		padding: 0 0 40rem 0;
+		.objctimg_box {
+			z-index: -1;
+		}
+	}
+
+	.heroslide_info {
+		position: absolute;
+		left: 7rem;
+		top: 4.8rem;
+		background: $green-dark;
+		max-width: 32rem;
+		text-align: center;
+		color: $white;
+		padding: 3rem 3.4rem 1.4rem;
+		box-shadow: 0.1rem -0.1rem 1.2rem 0 rgba(0, 0, 0, 0.37);
+
+		@include bp(tabletmd) {
+			left: 2rem;
+			top: 4.8rem;
+		}
+
+		@include bp(tabletsm) {
+			top: 32.2rem;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		.top_title {
+			font-weight: $mediumdark;
+			font-size: 1.2rem;
+			letter-spacing: 0.2rem;
+		}
+
+		h1 {
+			color: $white;
+			margin-bottom: 0.5rem;
+			letter-spacing: -0.4rem;
+		}
+
+		.btn {
+			width: 100%;
+			margin: 1.3rem 0;
+			letter-spacing: 0.1rem;
+		}
+	}
+}
+
+.slickcounter {
+	.slick-arrow {
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		background: $white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $gold;
+		margin: 0 0.5rem 0;
+		cursor: pointer;
+		line-height: 0;
+	}
+
+	.slickitemcount {
+		min-width: 3.2rem;
+		margin: 0 0.7rem;
+	}
+}

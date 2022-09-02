@@ -1,0 +1,283 @@
+//
+// Component: Variables
+//
+// ========================================================================
+
+header .dropdown {
+	display: none;
+	position: absolute;
+	z-index: 1020;
+	box-sizing: border-box;
+	min-width: 20rem;
+	padding: 2.5rem;
+	background: #fff;
+	color: #666;
+	box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, .1);
+}
+
+// Global variables
+// ========================================================================
+
+
+
+.logo {
+	width: 14.2rem;
+	height: 3.9rem;
+}
+
+//
+// Component:       Variables
+// Description:     Defines common values which are used across all components
+//
+// ========================================================================
+
+
+// Load deprecated components
+// ========================================================================
+
+$deprecated:                                    false !default;
+
+ 
+// Breakpoints
+// ========================================================================
+
+// Phone Portrait:   Galaxy (360x640), iPhone 6 (375x667), iPhone 6+ (414x736)
+// Phone Landscape:  Galaxy (640x360), iPhone 6 (667x375), iPhone 6+ (736x414)
+// Tablet Portrait:  iPad (768x1024), Galaxy Tab (800x1280),
+// Tablet Landscape: iPad (1024x768), iPad Pro (1024x1366),
+// Desktop:          Galaxy Tab (1280x800), iPad Pro (1366x1024)
+
+$breakpoint-small:                              640px !default;  // Phone landscape
+$breakpoint-medium:                             960px !default;  // Tablet Landscape
+$breakpoint-large:                              1200px !default; // Desktop
+$breakpoint-xlarge:                             1600px !default; // Large Screens
+
+$breakpoint-xsmall-max:                         ($breakpoint-small - 1) !default;
+$breakpoint-small-max:                          ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max:                         ($breakpoint-large - 1) !default;
+$breakpoint-large-max:                          ($breakpoint-xlarge - 1) !default;
+
+
+// Global variables
+// ========================================================================
+
+//
+// Typography
+//
+
+$global-font-family: "Inter", Arial !default;
+$global-font-size:                               16px !default;
+$global-line-height:                             1.5 !default;      // 24px
+
+$global-2xlarge-font-size:                       2.625rem !default; // 42px
+$global-xlarge-font-size:                        2rem !default;     // 32px
+$global-large-font-size:                         1.5rem !default;   // 24px
+$global-medium-font-size:                        1.25rem !default;  // 20px
+$global-small-font-size:                         0.875rem !default; // 14px
+
+//
+// Colors
+//
+$brand-color: #417630;
+$brand-color-secondary: #B7A66D;
+$brand-black: #1E1E1E;
+$brand-white: #FFFFFF;
+$white:$brand-white;
+$bg-cover: $brand-white;
+$text-color: #333333;
+$accent-color: #417630;
+$alert-color: #e51c23;
+$highlight-color: #FFF310;
+$yellow: $highlight-color;
+
+$global-color:                                   #1e1e1e !default;
+$global-emphasis-color:                          #417630 !default;
+$global-muted-color:                             #999 !default;
+
+$global-link-color:                              #417630 !default;
+$global-link-hover-color:                        #B7A66D !default;
+
+$global-inverse-color:                           #fff !default;
+
+$topnav-color : #666666;
+
+$green : $brand-color;
+$green-light : #6E8F5E;
+$green-dark : #355128;
+$green-darker : #1E2E16;
+
+/* (used as background color in nav hover/toggle states and in some content blocks) */
+$cream :#F8F6EF;
+
+$grey1 : #EEEEEE ;
+$grey2 : #DDDDDD ;
+$grey3 : #CCCCCC ;
+$grey4 : #707070 ;
+$grey5 : #666666 ;
+$grey6 : #333333 ;
+$grey7 : #F7F7F7;
+
+$gold : $brand-color-secondary;
+$gold-light : #D4CAA7;
+$gold-dark : #80744C;
+
+$orange: #B76C51;
+$videobg-green : #DBE3D7;
+$accordian-hover:#555555;
+
+//
+// Backgrounds
+//
+
+$global-background:                              #fff !default;
+
+$global-muted-background:                        #f8f8f8 !default;
+$global-primary-background:                      #1e87f0 !default;
+$blue:											 #1e87f0;
+$global-secondary-background:                    #222 !default;
+
+$global-success-background:                      #32d296 !default;
+$global-warning-background:                      #faa05a !default;
+$global-danger-background:                       #f0506e !default;
+
+//
+// Borders
+//
+
+$global-border-width:                            1px !default;
+$global-border:                                  #e5e5e5 !default;
+
+//
+// Box-Shadows
+//
+
+$global-small-box-shadow:                        0 2px 8px rgba(0,0,0,0.08) !default;
+$global-medium-box-shadow:                       0 5px 15px rgba(0,0,0,0.08) !default;
+$global-large-box-shadow:                        0 14px 25px rgba(0,0,0,0.16) !default;
+$global-xlarge-box-shadow:                       0 28px 50px rgba(0,0,0,0.16) !default;
+
+//
+// Spacings
+//
+
+// Used in margin, section, list
+$global-margin:                                  20px !default;
+$global-small-margin:                            10px !default;
+$global-medium-margin:                           40px !default;
+$global-large-margin:                            70px !default;
+$global-xlarge-margin:                           140px !default;
+
+// Used in grid, column, container, align, card, padding
+$global-gutter:                                  30px !default;
+$global-small-gutter:                            15px !default;
+$global-medium-gutter:                           40px !default;
+$global-large-gutter:                            70px !default;
+
+//
+// Controls
+//
+
+$global-control-height:                          40px !default;
+$global-control-small-height:                    30px !default;
+$global-control-large-height:                    55px !default;
+
+//
+// Z-index
+//
+
+$global-z-index:                                 1000 !default;
+
+
+
+
+ul {
+	margin-left: 1rem;
+}
+
+.bulletlist {
+	list-style: none;
+	margin-left: 0;
+
+	@include bp(sm) {
+		max-width: 32rem;
+		text-align: left;
+		margin: 0 0 2rem 1rem;
+	}
+
+	li {
+		position: relative;
+		padding: 0 0 0 1.9rem;
+		line-height: 1.4;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			height: 0.6rem;
+			width: 0.6rem;
+			border-radius: 50%;
+			background: #d56c2d;
+			position: absolute;
+			left: 0.1rem;
+			top: 1.2rem;
+		}
+	}
+}
+
+
+
+
+/* .fscheck{
+	@include bp(breakpoint_xlarge) {
+		font-size: rem(50);
+	}
+	@include bp(breakpoint_large) {
+		font-size: rem(50);
+	}
+	@include bp(breakpoint_medium) {
+		font-size: rem(50);
+	}
+	@include bp(breakpoint_small) {
+		font-size: rem(50);
+	}
+
+
+
+	@include bp(xxlmin) {
+		font-size: rem(50);
+	}
+	@include bp(xlmin) {
+		font-size: rem(50);
+	}
+	@include bp(xl) {
+		font-size: rem(50);
+	}
+	@include bp(lgmin) {
+		font-size: rem(50);
+	}
+	@include bp(lg) {
+		font-size: rem(50);
+	}
+	@include bp(tabletXl) {
+		font-size: rem(50);
+	}
+	@include bp(tabletmd) {
+		font-size: rem(50);
+	}
+	@include bp(tablet) {
+		font-size: rem(50);
+	}
+
+	@include bp(tabletsm) {
+		font-size: rem(50);
+	}
+	@include bp(sm) {
+		font-size: rem(50);
+	}
+	@include bp(xsm) {
+		font-size: rem(50);
+	}
+	@include bp(xxsm) {
+		font-size: rem(50);
+	}
+		
+} */

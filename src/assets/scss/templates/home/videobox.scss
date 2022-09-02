@@ -1,0 +1,117 @@
+.videobox {
+	&.innerspacing {
+		@include bp(lgmin) {
+			padding: 8rem 0;
+		}
+		@include bp(sm) {
+			padding-top: 8rem;
+			position: relative;
+			z-index: 1;
+
+			&:before{
+				content: "";
+				position: absolute;
+				z-index: -1;
+				width: 95%;
+				top: 4.9rem;
+				height: 3rem;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				background: url(../images/sdw.svg) center
+				bottom no-repeat;
+			}
+		}
+	}
+
+	@include bp(tabletsm) {
+		.container {
+			padding: 0;
+		}
+	}
+
+	.videobox_info {
+		background: $videobg-green;
+		padding: 7.1rem 8.3rem;
+
+		@include bp(lg) {
+			padding: 4.1rem 4.3rem;
+		}
+		@include bp(tabletmd) {
+			padding: 1.5rem;
+		}
+
+		@include bp(sm) {
+			box-shadow:2px 2px 12px 0 #d1d1d1;
+		}
+
+		.videobox_txt {
+			width: 40.7rem;
+			padding: 3.7rem 5.7rem 0 0;
+			text-align: center;
+
+			@include bp(tabletmd) {
+				width: 30.7rem;
+				padding: 2.7rem 2rem 0 0;
+			}
+
+			@include bp(tabletsm) {
+				width: 100%;
+				padding: 1rem 0 0 0;
+			}
+
+			p {
+				font-size: 2rem;
+				line-height: 1.6;
+				font-style: italic;
+
+				@include bp(lg) {
+					font-size: 1.8rem;
+				}
+				@include bp(tabletmd) {
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		.video_profile {
+			margin-bottom: 2.6rem;
+			figure {
+				margin: 0;
+				span {
+					height: 6rem;
+					width: 6rem;
+					border-radius: 50%;
+					margin: 2.5rem auto 0.8rem;
+					display: block;
+				}
+
+				figcaption {
+					margin-bottom: 0;
+					display: block;
+				}
+			}
+
+			.post {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.videobox_media {
+		width: calc(100% - 40.7rem);
+
+		@include bp(tabletmd) {
+			width: calc(100% - 30.7rem);
+		}
+
+		@include bp(tabletsm) {
+			width: 100%;
+			min-height: 30rem;
+		}
+
+		@include bp(sm) {
+			min-height: 20rem;
+		}
+	}
+}

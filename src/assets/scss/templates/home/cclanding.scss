@@ -1,0 +1,64 @@
+.cclanding {
+	padding: 1.5rem 0 0;
+	display: block;
+
+	.container {
+		@include bp(sm) {
+			padding: 0;
+		}
+	}
+	.cclanding_item {
+		width: 50%;
+		padding: 3.9rem 3rem 0.8rem;
+
+		@include bp(sm) {
+			width: 100%;
+		}
+
+		h3 {
+			margin-bottom: 0.6rem;
+			color: $green-darker;
+		}
+
+		p {
+			margin: 0.6rem 0 3rem;
+			small {
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		figure {
+			margin: 3.4rem auto 1.1rem;
+		}
+
+		.applymore {
+			margin-bottom: 2rem;
+			.btn {
+				display: block;
+				max-width: 30rem;
+				margin: 0 auto 1rem;
+				padding: 1.2rem;
+				font-weight: $bold;
+
+				@include bp(lgmin) {
+					width: 33rem;
+					max-width: 100%;
+
+					&.ghostbtn{
+						padding: 1rem;
+					}
+				}
+			}
+
+			+ p >small{
+				font-size: 1.2rem;
+			}
+		}
+
+		+ .cclanding_item {
+			background: $grey7;
+		}
+	}
+}

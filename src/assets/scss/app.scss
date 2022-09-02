@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+@import "global-settings";
+
+/*
+  My custom styles:
+  Add your scss files below to structure your project styles
+*/
+
+// Global
+@import "global/colors";
+@import "global/fonts";
+@import "global/typography";
+
+/* libreries */
+
+@import "lib/slick";
+@import "lib/slick-theme";
+
+// Modules
+@import "modules/navigation";
+@import "modules/footer";
+
+//templates
+@import "templates/home/hero_slider";
+@import "templates/home/quick_link";
+@import "templates/home/spotlight";
+@import "templates/home/cclanding";
+@import "templates/home/videobox";
+@import "templates/home/justeasy";
+@import "templates/home/newsworthy";

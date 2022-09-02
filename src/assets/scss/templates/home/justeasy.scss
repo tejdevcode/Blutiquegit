@@ -1,0 +1,98 @@
+.justeasy {
+	@include bp(sm) {
+	}
+	.top_txt {
+		margin: 1rem 0 3rem;
+
+		@include bp(sm) {
+			&:after {
+				width: 20rem;
+				margin: 0 auto;
+				background: $grey3;
+				height: 0.1rem;
+				content: "";
+				display: block;
+			}
+		}
+
+		h2 {
+			margin: -1rem 0 1.5rem;
+			line-height: 1;
+			letter-spacing: -0.4rem;
+		}
+	}
+
+	.justeasy_info {
+		border-top: 0.1rem solid $green;
+		border-bottom: 0.1rem solid $green;
+		margin: 0 auto;
+		max-width: 113.7rem;
+
+		@include bp(sm) {
+			border-top: 0;
+		}
+
+		.easyitem {
+			width: calc(33.33% - 1.5rem);
+			margin: 5rem 0 3.3rem 0;
+
+			@include bp(sm) {
+				width: 100%;
+				margin: 2rem 0 2rem 0;
+			}
+
+			@include bp(sm) {
+				&:after {
+					width: 20rem;
+					margin: 0 auto;
+					background: $grey3;
+					height: 0.1rem;
+					content: "";
+					display: block;
+					position: relative;
+					bottom: -1.5rem;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 4rem;
+				&:after {
+					background: none;
+				}
+			}
+
+			h5 {
+				font-weight: $medium;
+				margin: 0 0 1.1rem 0;
+			}
+		}
+	}
+
+	.openac_btn {
+		padding: 3rem 0 6rem;
+		background: $grey7;
+
+		@include bp(sm) {
+			margin: 0 -1.5rem;
+		}
+		.btn {
+			letter-spacing: 0.1rem;
+
+			@include bp(lgmin) {
+				min-width: 30.9rem;
+			}
+		}
+	}
+}
+
+.roundico {
+	width: 7.2rem;
+	height: 7.2rem;
+	border-radius: 50%;
+	margin: 0 auto 2rem;
+	border: 0.1rem solid $green;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
