@@ -29,6 +29,7 @@ jQuery(document).ready(function () {
 	});
 	*/
 	if(window.innerWidth > 991){
+		/*dropdown nav js*/
 		$('.dropdown_nav > a').on('click' , function(e){
 			if($(this).parent().hasClass('active')){
 				$(this).parent().find('.dropdown_child').slideUp();
@@ -41,6 +42,7 @@ jQuery(document).ready(function () {
 			$('.dropdown_childtwo').find('ul').slideUp();
 		});
 
+		/*drop down back*/
 		$('.dropdown_childtwo > a').on('click' , function(){
 			$(this).parent().find('ul').slideDown();
 		});
@@ -48,11 +50,14 @@ jQuery(document).ready(function () {
 			$(this).parent().slideUp();
 		});
 
+		/*other then nav item click js*/
 		$(document).on("click", function(e){
 			if(!$(e.target).parents().hasClass('dropdown_nav')){
 				$(".dropdown_child").slideUp("fast").parent().removeClass('active');
 			}	
 		});
+
+		/*login icon click nav*/
 		$('.loginitem .closingico').click(function(){
 			$(this).closest('.dropdown_child').slideUp();
 			$(this).parents('.loginitem').removeClass('active');
