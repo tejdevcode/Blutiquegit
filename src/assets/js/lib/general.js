@@ -84,7 +84,7 @@ jQuery(document).ready(function () {
 	});
 
 	$('.introallert_boxclose').click(function(){
-		$(this).parent().hide();
+		$(this).parent().slideUp();
 	});
 
 

@@ -84,10 +84,7 @@ function sass() {
       includePaths: PATHS.sass
     })
       .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
-
+    .pipe($.autoprefixer({browsers: COMPATIBILITY }))
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write(PATHS.dist + '/assets/css')))
     .pipe($.if(REVISIONING && PRODUCTION || REVISIONING && DEV, $.rev()))
